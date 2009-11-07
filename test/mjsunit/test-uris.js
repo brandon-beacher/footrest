@@ -25,10 +25,10 @@ var assertUuids = function(response, json) {
 var testDatabase = function(db) {
   db.get(assertDatabaseInfo);
   db.get('/', assertDatabaseInfo);
-  // db.get('_all_docs', assertAllDocs);
-  // db.get('_all_docs/', assertAllDocs);
-  // db.get('/_all_docs', assertAllDocs);
-  // db.get('/_all_docs/', assertAllDocs);
+  db.get('_all_docs', assertAllDocs);
+  db.get('_all_docs/', assertAllDocs);
+  db.get('/_all_docs', assertAllDocs);
+  db.get('/_all_docs/', assertAllDocs);
 };
 
 var testServer = function(server) {
